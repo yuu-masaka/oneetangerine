@@ -67,3 +67,13 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowRight') {
+        nextPage();
+    }
+
+    if (event.key === 'ArrowLeft') {
+        previousPage();
+    }
+});
